@@ -6,6 +6,15 @@ a 21,045 sq ft contemporary family home marketed by **BlackOak Real Estate**. As
 Static site — vanilla HTML / CSS / JS, no framework, no build step. Built on the same
 scaffold as the BK82 (Burj Khalifa penthouse) landing page.
 
+## Design
+
+Styled after the `Villa 181 Asset Sheet.pdf` (in `assets/docs/`): deep navy `#09294D`
+surfaces with photo overlays, a white "paper" panel for the floor plans, Cormorant Garamond
+serif display headings over Inter body text, and pale steel-blue (`#9FB6D1`) tracked
+uppercase labels. Palette tokens live in `assets/css/tokens.css`. The floor-plan section mirrors
+the sheet's spread: plan drawing on paper (left), level tabs + room table on navy with the two
+"pictured" photos per level (right).
+
 ---
 
 ## Quick start
@@ -24,7 +33,7 @@ Optimised assets in `assets/` are committed and deployed.
 - `index.html` — six scroll-snapped full-screen sections: Hero · Gallery · The Setting · Floor Plans · Highlights · Enquire
 - Layered CSS via `@import` in `assets/css/main.css` (tokens → reset → base → layout → components → sections → animations)
 - ESM modules in `assets/js/` — `main`, `nav`, `reveal`, `gallery`, `plans`, `lead-form`
-- Self-hosted Inter (latin + latin-ext), strict CSP via `<meta>`, no inline scripts/styles
+- Self-hosted Inter + Cormorant Garamond (latin + latin-ext), strict CSP via `<meta>`, no inline scripts/styles
 - Dual-tier WebP photos (2400 + 1600), silent MP4 + WebM hero loop, cropped WebP floor plans
 - Three JSON-LD blocks (`SingleFamilyResidence` with `Offer`, `RealEstateAgent`, `BreadcrumbList`), `sitemap.xml`, `robots.txt`, `llms.txt`
 

@@ -1,32 +1,39 @@
 :root {
-  /* ── Emerald Hills palette: deep emerald ink, stone white, brass ── */
-  --teal:        #16221E;
-  --teal-mid:    #1C2B26;
-  --teal-light:  #253830;
-  --ink:         #0C1512;
-  --gold:        #C9A96A;
-  --gold-soft:   rgb(201 169 106 / 0.35);
-  --gold-faint:  rgb(201 169 106 / 0.12);
-  --white:       #F4F3EF;
-  --white-dim:   rgb(244 243 239 / 0.55);
-  --white-faint: rgb(244 243 239 / 0.12);
-  --white-ghost: rgb(244 243 239 / 0.07);
+  /* ── Villa 181 asset-sheet palette: deep navy, paper white, steel-blue labels ── */
+  --navy:        #09294D;
+  --navy-deep:   #061D38;
+  --navy-mid:    #0D3360;
+  --navy-light:  #164272;
+  --paper:       #F6F7F9;
+  --accent:      #9FB6D1;
+  --accent-strong: #C9D8EA;
+  --white:       #F7F8FA;
+  --white-dim:   rgb(247 248 250 / 0.62);
+  --white-faint: rgb(247 248 250 / 0.14);
+  --white-ghost: rgb(247 248 250 / 0.08);
 
-  /* Aliases used by shared modules */
+  /* Legacy aliases used by shared modules (nav, form, gallery buttons) */
+  --teal:        var(--navy);
+  --teal-mid:    var(--navy-mid);
+  --teal-light:  var(--navy-light);
+  --ink:         var(--navy-deep);
+  --gold:        var(--accent);
+  --gold-soft:   rgb(159 182 209 / 0.35);
+  --gold-faint:  rgb(159 182 209 / 0.12);
   --bg:           var(--ink);
-  --bg-elev:      var(--teal);
-  --bg-overlay:   rgb(12 21 18 / 0.72);
+  --bg-elev:      var(--navy);
+  --bg-overlay:   rgb(9 41 77 / 0.72);
   --text:         var(--white);
   --text-muted:   var(--white-dim);
-  --text-dim:     rgb(244 243 239 / 0.30);
-  --accent:       var(--gold);
+  --text-dim:     rgb(247 248 250 / 0.32);
   --accent-soft:  var(--gold-soft);
-  --accent-deep:  #8a7548;
+  --accent-deep:  #5E7A9C;
   --hairline:     var(--white-faint);
-  --hairline-strong: rgb(244 243 239 / 0.28);
-  --error:        #d97862;
-  --success:      #a8c79a;
+  --hairline-strong: rgb(247 248 250 / 0.3);
+  --error:        #E8927C;
+  --success:      #A9D3B4;
 
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --fs-eyebrow: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);

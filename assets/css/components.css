@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgb(12 21 18 / 0.85);
+  background: rgb(6 29 56 / 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--white-faint);
@@ -42,7 +42,7 @@
 .nav__brand { margin-right: auto; }
 .nav__links { margin-right: auto; }
 .nav.is-scrolled {
-  background: rgb(12 21 18 / 0.92);
+  background: rgb(6 29 56 / 0.92);
 }
 
 .nav__brand {
@@ -94,8 +94,8 @@
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--white);
+  color: var(--navy);
   padding: 10px 24px;
   text-decoration: none;
   transition: opacity var(--dur-fast) var(--ease-out);
@@ -109,7 +109,7 @@
   gap: 5px;
   padding: 10px;
   background: transparent;
-  border: 1px solid rgb(201 169 106 / 0.4);
+  border: 1px solid rgb(159 182 209 / 0.4);
   cursor: pointer;
 }
 @media (min-width: 901px) { .nav__toggle { display: none; } }
@@ -202,13 +202,13 @@
   line-height: 1;
   color: var(--gold);
   background: transparent;
-  border: 1px solid rgb(201 169 106 / 0.4);
+  border: 1px solid rgb(159 182 209 / 0.4);
   border-radius: 50%;
   cursor: pointer;
 }
 .nav__drawer-close:hover {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--white);
+  color: var(--navy);
 }
 
 @media (max-width: 900px) {
@@ -227,7 +227,7 @@
 
 /* Phones with very narrow viewports — drop the inline CTA; the drawer's
    "Enquire" link already covers it. */
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .nav__cta { display: none; }
 }
 
@@ -235,8 +235,8 @@
 .g-btn {
   width: 40px;
   height: 40px;
-  border: 1px solid rgb(201 169 106 / 0.3);
-  background: rgb(12 21 18 / 0.6);
+  border: 1px solid rgb(159 182 209 / 0.3);
+  background: rgb(6 29 56 / 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   color: var(--gold);
@@ -251,9 +251,9 @@
 }
 .g-btn:hover,
 .g-btn:focus-visible {
-  background: var(--gold);
-  color: var(--ink);
-  border-color: var(--gold);
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
   outline: none;
 }
 .g-arrows {
@@ -288,7 +288,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgb(244 243 239 / 0.3);
+  color: rgb(247 248 250 / 0.3);
 }
 .cf-group input,
 .cf-group textarea {
@@ -310,15 +310,15 @@
 .cf-group input:focus,
 .cf-group textarea:focus { border-color: var(--gold); }
 .cf-group input::placeholder,
-.cf-group textarea::placeholder { color: rgb(244 243 239 / 0.18); }
+.cf-group textarea::placeholder { color: rgb(247 248 250 / 0.18); }
 .cf-group textarea { resize: none; height: 56px; }
 .cf-group input:user-invalid,
 .cf-group textarea:user-invalid { border-color: #d97862; }
 
 .cf-submit {
   margin-top: 8px;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--white);
+  color: var(--navy);
   border: 0;
   padding: 15px 36px;
   font-family: var(--font-sans);
