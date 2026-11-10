@@ -1,0 +1,370 @@
+/* ---------- Labels (used across sections) ---------- */
+.label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.label-dim {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+/* ---------- Nav ---------- */
+/* BEM scaffold (.nav, .nav__toggle, .nav__drawer, .nav__backdrop,
+   .nav__drawer-close) is required by nav.js — do not rename. */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: calc(var(--nav-h) + var(--safe-top));
+  padding-top: var(--safe-top);
+  padding-left: calc(48px + var(--safe-left));
+  padding-right: calc(48px + var(--safe-right));
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgb(12 21 18 / 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--white-faint);
+}
+/* Spread the row: brand left · links center · cta right.
+   When links is hidden (mobile), brand stays left and cta/toggle go right. */
+.nav__brand { margin-right: auto; }
+.nav__links { margin-right: auto; }
+.nav.is-scrolled {
+  background: rgb(12 21 18 / 0.92);
+}
+
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav__logo {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .nav__logo { width: 110px; }
+}
+
+/* Black-on-transparent wordmark → render white on the dark site */
+.logo-invert {
+  filter: invert(1) brightness(1.05);
+}
+
+.nav__links {
+  display: none;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 901px) {
+  .nav__links { display: flex; }
+}
+.nav__links a {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.nav__links a:hover { color: var(--white); }
+
+.nav__cta {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+.nav__cta:hover { opacity: 0.85; }
+
+.nav__toggle {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgb(201 169 106 / 0.4);
+  cursor: pointer;
+}
+@media (min-width: 901px) { .nav__toggle { display: none; } }
+.nav__toggle span {
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+  transition: transform var(--dur-fast) var(--ease-out), opacity var(--dur-fast);
+}
+.nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.nav__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 298;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-med) var(--ease-out);
+}
+.nav__backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (min-width: 901px) { .nav__backdrop { display: none; } }
+
+.nav__drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(86vw, 360px);
+  background: var(--teal);
+  z-index: 299;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding:
+    calc(var(--space-4) + var(--safe-top))
+    calc(var(--space-4) + var(--safe-right))
+    calc(var(--space-4) + var(--safe-bottom))
+    var(--space-4);
+  transform: translateX(100%);
+  transition: transform var(--dur-med) var(--ease-out);
+  pointer-events: none;
+  box-shadow: -24px 0 60px rgb(0 0 0 / 0.6);
+  border-left: 1px solid var(--white-faint);
+  overflow-y: auto;
+}
+.nav__drawer.is-open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+.nav__drawer ul {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.nav__drawer a {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--white-faint);
+  transition: color var(--dur-fast);
+}
+.nav__drawer a:hover { color: var(--gold); }
+
+.nav__drawer-close {
+  position: absolute;
+  top: calc(var(--space-3) + var(--safe-top));
+  right: calc(var(--space-3) + var(--safe-right));
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid rgb(201 169 106 / 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav__drawer-close:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding-left: calc(20px + var(--safe-left));
+    padding-right: calc(20px + var(--safe-right));
+    gap: 10px;
+  }
+  .nav__cta {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    padding: 9px 14px;
+  }
+  .nav__toggle { padding: 8px; }
+}
+
+/* Phones with very narrow viewports — drop the inline CTA; the drawer's
+   "Enquire" link already covers it. */
+@media (max-width: 380px) {
+  .nav__cta { display: none; }
+}
+
+/* ---------- Gallery prev/next buttons ---------- */
+.g-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(201 169 106 / 0.3);
+  background: rgb(12 21 18 / 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--gold);
+  font-size: 16px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast);
+  pointer-events: auto;
+}
+.g-btn:hover,
+.g-btn:focus-visible {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+  outline: none;
+}
+.g-arrows {
+  display: inline-flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+/* ---------- Contact form (S5) ---------- */
+.cf {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .cf-row { grid-template-columns: 1fr; }
+}
+
+.cf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cf-group label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgb(244 243 239 / 0.3);
+}
+.cf-group input,
+.cf-group textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--white-faint);
+  padding: 10px 0;
+  font-family: var(--font-sans);
+  font-size: max(13px, 16px);
+  font-weight: 300;
+  color: var(--white);
+  outline: none;
+  transition: border-color var(--dur-fast);
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.cf-group input:focus,
+.cf-group textarea:focus { border-color: var(--gold); }
+.cf-group input::placeholder,
+.cf-group textarea::placeholder { color: rgb(244 243 239 / 0.18); }
+.cf-group textarea { resize: none; height: 56px; }
+.cf-group input:user-invalid,
+.cf-group textarea:user-invalid { border-color: #d97862; }
+
+.cf-submit {
+  margin-top: 8px;
+  background: var(--gold);
+  color: var(--ink);
+  border: 0;
+  padding: 15px 36px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity var(--dur-fast);
+}
+.cf-submit:hover,
+.cf-submit:focus-visible { opacity: 0.85; outline: none; }
+.cf-submit[disabled] { opacity: 0.4; cursor: not-allowed; }
+
+/* Off-screen honeypot — used by .field--honeypot wrapper.
+   CSS-only positioning so the markup needs no inline style= (CSP). */
+.field--honeypot {
+  position: absolute !important;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form__status {
+  font-size: 12px;
+  font-family: var(--font-sans);
+  color: var(--white-dim);
+  padding: 4px 0;
+  min-height: 1.2em;
+}
+.form__status[data-state="error"]   { color: #d97862; }
+.form__status[data-state="success"] { color: #a8c79a; }
+.form__status:empty { display: none; }
+
+/* ---------- Skip link (a11y) ---------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 1000;
+  background: var(--ink);
+  color: var(--white);
+  padding: 0.6em 1em;
+  border: 1px solid var(--gold);
+  text-decoration: none;
+}
+.skip-link:focus { top: 12px; }

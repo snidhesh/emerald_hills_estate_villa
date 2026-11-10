@@ -1,0 +1,83 @@
+:root {
+  /* ── Emerald Hills palette: deep emerald ink, stone white, brass ── */
+  --teal:        #16221E;
+  --teal-mid:    #1C2B26;
+  --teal-light:  #253830;
+  --ink:         #0C1512;
+  --gold:        #C9A96A;
+  --gold-soft:   rgb(201 169 106 / 0.35);
+  --gold-faint:  rgb(201 169 106 / 0.12);
+  --white:       #F4F3EF;
+  --white-dim:   rgb(244 243 239 / 0.55);
+  --white-faint: rgb(244 243 239 / 0.12);
+  --white-ghost: rgb(244 243 239 / 0.07);
+
+  /* Aliases used by shared modules */
+  --bg:           var(--ink);
+  --bg-elev:      var(--teal);
+  --bg-overlay:   rgb(12 21 18 / 0.72);
+  --text:         var(--white);
+  --text-muted:   var(--white-dim);
+  --text-dim:     rgb(244 243 239 / 0.30);
+  --accent:       var(--gold);
+  --accent-soft:  var(--gold-soft);
+  --accent-deep:  #8a7548;
+  --hairline:     var(--white-faint);
+  --hairline-strong: rgb(244 243 239 / 0.28);
+  --error:        #d97862;
+  --success:      #a8c79a;
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --fs-eyebrow: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);
+  --fs-body:    clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  --fs-lead:    clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --fs-h3:      clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-h2:      clamp(2.25rem, 1.5rem + 3vw, 4rem);
+  --fs-h1:      clamp(3rem, 2rem + 5vw, 6.5rem);
+  --fs-display: clamp(4rem, 2.5rem + 7vw, 9rem);
+
+  --tracking-eyebrow: 0.22em;
+  --tracking-display: -0.015em;
+  --tracking-tight:   -0.01em;
+  --tracking-body:    0;
+  --tracking-wide:    0.05em;
+
+  --lh-display: 1.02;
+  --lh-heading: 1.1;
+  --lh-body:    1.65;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --space-8: 8rem;
+  --space-9: 12rem;
+
+  --section-py: clamp(5rem, 4rem + 6vw, 10rem);
+
+  --container:      1320px;
+  --container-wide: 1680px;
+  --container-narrow: 880px;
+  --gutter: clamp(1.25rem, 1rem + 2vw, 2.5rem);
+
+  --nav-h: 64px;
+
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    180ms;
+  --dur-med:     420ms;
+  --dur-slow:    900ms;
+
+  --z-nav:   50;
+  --z-modal: 100;
+  --z-toast: 200;
+}

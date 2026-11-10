@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://emerald-hills-villa.vercel.app/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://emerald-hills-villa.vercel.app/assets/img/hero/poster.jpg</image:loc>
+      <image:title>Villa 181, Emerald Hills — arrival court</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emerald-hills-villa.vercel.app/assets/img/sections/formal-living-staircase-2400.webp</image:loc>
+      <image:title>Formal living room with the sculptural spiral staircase</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emerald-hills-villa.vercel.app/assets/img/sections/pool-aerial-2400.webp</image:loc>
+      <image:title>Rooftop view over the pool to the Dubai Hills golf course</image:title>
+    </image:image>
+  </url>
+</urlset>

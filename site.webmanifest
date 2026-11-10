@@ -1,0 +1,12 @@
+{
+  "name": "Villa 181, Emerald Hills — BlackOak Real Estate",
+  "short_name": "Villa 181",
+  "description": "A contemporary 21,000 sq ft family home in Emerald Hills, Dubai Hills Estate.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C1512",
+  "theme_color": "#0C1512",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ]
+}

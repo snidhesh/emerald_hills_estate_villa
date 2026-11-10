@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+._*
+
+# Heavy source assets — originals stay out of git
+source/
+
+# Vercel local dev artefacts
+.vercel/
+.env
+.env*.local
+
+# ffmpeg two-pass logs
+ff2pass-*.log
+ff2pass-*.log.mbtree
+ffmpeg2pass-*
+
+# Editors / node
+.vscode/
+.idea/
+*.swp
+node_modules/
+*.log

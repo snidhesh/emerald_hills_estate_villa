@@ -1,0 +1,8 @@
+{
+  "name": "emerald-hills-villa-181",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Villa 181, Emerald Hills — Dubai Hills Estate landing page (BlackOak Real Estate)",
+  "type": "module",
+  "engines": { "node": ">=20" }
+}
