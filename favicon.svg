@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="6" fill="#09294D"/>
-  <text x="32" y="45" text-anchor="middle"
-        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
-        font-size="34" font-weight="600" fill="#F7F8FA" letter-spacing="-1">181</text>
+  <text x="32" y="42" text-anchor="middle"
+        font-family="Inter, system-ui, Helvetica, Arial, sans-serif"
+        font-size="24" font-weight="500" fill="#F7F8FA" letter-spacing="-1">181</text>
 </svg>

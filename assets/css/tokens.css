@@ -4,7 +4,13 @@
   --navy-deep:   #061D38;
   --navy-mid:    #0D3360;
   --navy-light:  #164272;
-  --paper:       #F6F7F9;
+  --paper:       #F4F5F7;
+  --paper-2:     #FFFFFF;
+  --navy-text:   #0B2342;
+  --navy-dim:    rgb(9 41 77 / 0.62);
+  --navy-faint:  rgb(9 41 77 / 0.12);
+  --navy-ghost:  rgb(9 41 77 / 0.06);
+  --accent-deep: #5E7A9C;
   --accent:      #9FB6D1;
   --accent-strong: #C9D8EA;
   --white:       #F7F8FA;
@@ -27,13 +33,11 @@
   --text-muted:   var(--white-dim);
   --text-dim:     rgb(247 248 250 / 0.32);
   --accent-soft:  var(--gold-soft);
-  --accent-deep:  #5E7A9C;
   --hairline:     var(--white-faint);
   --hairline-strong: rgb(247 248 250 / 0.3);
   --error:        #E8927C;
   --success:      #A9D3B4;
 
-  --font-serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --fs-eyebrow: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);
