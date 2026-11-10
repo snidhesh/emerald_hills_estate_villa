@@ -8,7 +8,7 @@ scaffold as the BK82 (Burj Khalifa penthouse) landing page.
 
 ## Design
 
-Styled after the `Villa 181 Asset Sheet.pdf` (in `assets/docs/`): deep navy `#09294D`
+Styled after `source/Villa 181 Asset Sheet.pdf` (not deployed): deep navy `#09294D`
 used as the brand accent (nav, floor-plan table, amenities strip), alternating with white
 "paper" sections (floor plans, highlights, enquiry) and untinted full-bleed photography and video.
 Type is Inter only, the same self-hosted files as bk82, with light-weight headings and tracked
@@ -86,8 +86,7 @@ converted; the gallery uses 16 of them. Swap a slide by changing the slug in `in
 (`src`, `srcset`, and the tag).
 
 Floor-plan drawings were cropped from `source/Villa181_FloorPlans_blackOak.pdf` (pages 2–5)
-into `assets/img/plans/{basement,ground,first,roof}.webp`. Both PDFs are served from
-`assets/docs/` for download.
+into `assets/img/plans/{basement,ground,first,roof}.webp`. No PDFs are deployed.
 
 ## Accessibility
 
