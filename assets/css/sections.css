@@ -271,8 +271,7 @@
   .fp-paper { padding: 20px 20px 36px; min-height: 62vw; }
   .fp-plan { position: relative; inset: auto; width: 100%; max-height: 70svh; }
   .fp-plan img { max-height: 66svh; }
-  .fp-paper-note { display: none; }
-  .fp-paper-brand { left: 20px; right: auto; bottom: 12px; }
+  .fp-paper-note { left: 20px; bottom: 12px; }
   .fp-info { overflow: visible; }
   .fp-level { position: relative; inset: auto; padding: 28px 24px 32px; overflow: visible; }
   .fp-pics { padding-top: 22px; }

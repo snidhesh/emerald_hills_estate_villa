@@ -70,7 +70,7 @@ export function initLeadForm() {
     } catch (err) {
       console.error('[lead-form]', err);
       setStatus(
-        'We could not submit your request. Please email info@blackoak-re.com or call +971 4 398 9055.',
+        'We could not submit your request. Please email riad@blackoak-re.com or call +971 55 956 1231.',
         'error'
       );
     } finally {
