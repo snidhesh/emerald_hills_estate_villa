@@ -21,3 +21,5 @@ ffmpeg2pass-*
 *.swp
 node_modules/
 *.log
+.vercel
+.env*
